@@ -76,7 +76,14 @@ docker logs -f oai-amf
     sudo ./nr-softmodem -O ~/5g_testbed_tutorial/cots_ue_5g/gnbband78usrpb210.conf --sa -E --continuous-tx
 ![](./images/usrp2.png)
 docker logs -f oai-amf
-![](./images/5.png)
+![](./images/3.png)
+
+#### UE Connection
+    # Make sure ue is set to aeroplane mode before starting gNB
+    # Turn off aeroplane mode once gNB is up and running
+    docker logs -f oai-amf
+![](./images/3.png)
+
 
 #### Clean Up
     docker compose down
