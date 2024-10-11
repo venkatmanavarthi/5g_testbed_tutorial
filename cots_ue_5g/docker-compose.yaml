@@ -152,21 +152,6 @@ services:
         networks:
             public_net:
                 ipv4_address: 192.168.70.135
-    oai-gnb:
-        image: oaisoftwarealliance/oai-gnb:develop
-        container_name: oai-gnb
-        cap_drop:
-            - ALL
-        environment:
-            USE_ADDITIONAL_OPTIONS: -O /opt/oai-gnb/etc/gnb.conf --sa -E --log_config.global_log_options level,nocolor,time
-            ASAN_OPTIONS: detect_leaks=0
-        depends_on:
-            - oai-ext-dn
-        networks:
-            public_net:
-                ipv4_address: 192.168.71.140
-        volumes:
-            - ./gnbband78usrpb210.conf:/opt/oai-gnb/etc/gnb.conf
 
 networks:
     public_net:
