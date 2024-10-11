@@ -1,13 +1,15 @@
 # OAI 5G CN + Simulated UE
 
-
 #### Requirements
     1. Ubuntu Server 22.04
-    
+    2. Docker
+
+#### Initial Setup 
+<a href="https://docs.docker.com/engine/install/ubuntu/">Install Docker</a><br>
+<a href="https://docs.docker.com/engine/install/linux-postinstall/">Docker Post Installation Steps on Linux</a>
+
 #### Clone the Repository
     git clone https://github.com/venkatmanavarthi/5g_testbed_tutorial
-
-#### Running 5G Core Network With Simulated RAN, UE
     cd 5g_testbed_tutorial/simulated_ue_5g
 
 #### Pulling all the container images
@@ -21,7 +23,7 @@
 
 #### Running the CN Control Plane
     docker compose up -d mysql oai-amf oai-smf oai-upf oai-ext-dn
-    docker-compose ps -a
+    docker compose ps -a
 ![](./images%20/2.png)
 ![](./images%20/4.png)
 
